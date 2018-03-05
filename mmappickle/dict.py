@@ -194,7 +194,7 @@ class _kvdata:
     or we push a POP+POP (which removes both the key and the value). Since NEWTRUE and POP both have length 1, it is easy
     to make the substitution.
     
-    Another trick is that we cache the maximum value of the memoization index (for GET and PUT), to ensure that we have no duplicates.
+    Another trick is that we cache the maximum value of the memorization index (for GET and PUT), to ensure that we have no duplicates.
     
     The _kvdata structure has the following pickle ops:
     
@@ -245,7 +245,7 @@ class _kvdata:
         
         :returns: the frame length for this _kvdata.
         
-        This is done either by reading it in the file, or by computing it it doesn't exists"""
+        This is done either by reading it in the file, or by computing it if it doesn't exists"""
         
         if not self._exists:
             return 2 + self.key_length + self.data_length + 1 + 4 + 1 + 1 + 1
